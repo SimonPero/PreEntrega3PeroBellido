@@ -1,0 +1,109 @@
+.tamano {
+    height: 136.66px;
+    width: 136.66px;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.color-carta {
+    background-color: whitesmoke;
+    box-shadow: 0px 5px 20px black;
+}
+
+
+.lista-cartas {
+    display: grid;
+    list-style: none;
+    grid-template-areas:
+        "li li-dos"
+        "li-tres li-cuatro"
+        "li-cinco li-seis"
+        "li-siete li-ocho"
+        "li-nueve li-diez"
+    ;
+    margin: 1rem;
+    gap: 1.5rem;
+}
+
+.iconos {
+    width: 25px;
+    height: 25px;
+    background-color: none;
+}
+
+.estilo-boton {
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    align-content: right;
+}
+
+
+.popover__wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.popover__content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: -25px;
+    top: 4rem;
+    transform: translate(0, 10px);
+    background-color: #bfbfbf;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    width: auto;
+}
+
+.popover__content:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: calc(50% - 10px);
+    top: -8px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #bfbfbf transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.popover__wrapper:hover .popover__content {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    width: 5rem;
+    height: 1.7rem;
+    transform: translate(0, -20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.popover__message {
+    text-align: center;
+}
+
+.menu{
+    text-align: center;
+    width: 100%;
+}
+.menu ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-style: none;
+    gap: 4rem;
+}
+
+.menu ul li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color:#333;
+    transition-duration: 1s;
+}
