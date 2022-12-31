@@ -25,7 +25,7 @@ let i = -1
 for (const boton of botones) {
     i++
     boton.nombre = nombres[i]
-    boton.addEventListener("click", function caca() {
+    boton.addEventListener("click", function guardar() {
         if (bookmarked.find((el) => el.manga === boton.nombre.innerText)) {
             x = bookmarked.indexOf(bookmarked.find((el) => el.manga === boton.nombre.innerText))
             bookmarked.splice(x, x + 1)
